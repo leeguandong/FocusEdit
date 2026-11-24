@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="144" viewBox="0 0 760 144" role="img" aria-labelledby="title desc">
+<title id="title">FocusEdit</title><desc id="desc">Training-free image editing with spatial focus.</desc>
+<style>.ink{fill:#172b35}.accent{stroke:#008c83}.muted{fill:#576b75}@media(prefers-color-scheme:dark){.ink{fill:#e8f0f4}.accent{stroke:#55d5c6}.muted{fill:#a5b8c3}}</style>
+<g transform="translate(149 32)" fill="none" stroke-width="4.5" stroke-linecap="round" class="accent">
+<path d="M0 17V3a3 3 0 0 1 3-3h14M47 0h14a3 3 0 0 1 3 3v14M64 47v14a3 3 0 0 1-3 3H47M17 64H3a3 3 0 0 1-3-3V47"/>
+<rect x="20" y="20" width="24" height="24" rx="6" fill="#008c83" stroke="none"/>
+</g>
+<text x="239" y="88" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="750" letter-spacing="-2.8" class="ink">Focus<tspan fill="#008c83">Edit</tspan></text>
+<text x="380" y="132" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="600" letter-spacing="3" class="muted">IMAGE EDITING WITH SPATIAL FOCUS</text>
+</svg>

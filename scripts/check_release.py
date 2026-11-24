@@ -18,6 +18,7 @@ RULES = {
     'private_hostname': r'\b[\w.-]+\.(?:internal|corp|local|lan)\b',
 }
 PUBLIC_HOSTS = {'github.com', 'huggingface.co', 'users.noreply.github.com'}
+PUBLIC_NAMESPACES = {'http://www.w3.org/2000/svg'}
 
 
 def scan(text, origin):
@@ -33,12 +34,36 @@ def scan(text, origin):
             except ValueError:
                 pass
         for url in re.findall(r'https?://[^\s)\]>"\']+',line):
+            if url in PUBLIC_NAMESPACES:
+                continue
             parsed=urlsplit(url)
             if parsed.username or parsed.password:
                 found.append({'file':origin,'line':i,'type':'url_credentials'})
             if parsed.hostname and parsed.hostname not in PUBLIC_HOSTS:
                 found.append({'file':origin,'line':i,'type':'unreviewed_endpoint'})
     return found
+
+
+def scan_blob(data, origin):
+    if data.startswith(b'\x89PNG\r\n\x1a\n'):
+        # Image pixels are binary. Inspect chunks rather than decode pixels as
+        # text; reject text metadata and EXIF that could contain private paths.
+        offset = 8
+        while offset + 12 <= len(data):
+            size = int.from_bytes(data[offset:offset+4], 'big')
+            kind = data[offset+4:offset+8]
+            if offset + size + 12 > len(data):
+                return [{'file':origin, 'type':'invalid_png'}]
+            if kind in {b'tEXt', b'zTXt', b'iTXt', b'eXIf'}:
+                return [{'file':origin, 'type':'image_metadata_requires_review'}]
+            offset += size + 12
+            if kind == b'IEND':
+                return [] if offset == len(data) else [{'file':origin, 'type':'png_trailing_data'}]
+        return [{'file':origin, 'type':'invalid_png'}]
+    try:
+        return scan(data.decode('utf-8'), origin)
+    except UnicodeDecodeError:
+        return [{'file':origin, 'type':'unreviewed_binary_file'}]
 
 
 def git(*args):
@@ -56,14 +81,14 @@ def main():
         if f.is_symlink():
             findings.append({'file':name,'type':'symlink'})
         elif f.is_file():
-            findings.extend(scan(f.read_text(),name))
+            findings.extend(scan_blob(f.read_bytes(),name))
     blobs=set()
     if args.history:
         for row in git('rev-list','--objects','--all').decode().splitlines():
             oid,_,name=row.partition(' ')
             if git('cat-file','-t',oid).strip()==b'blob' and oid not in blobs:
                 blobs.add(oid)
-                findings.extend(scan(git('cat-file','blob',oid).decode(),f'history:{name}'))
+                findings.extend(scan_blob(git('cat-file','blob',oid),f'history:{name}'))
         findings.extend(scan(git('log','--all','--format=fuller').decode(),'commit_metadata'))
     print(json.dumps({'files':sum(bool(x) for x in files),'history_blobs':len(blobs),'findings':findings},indent=2))
     raise SystemExit(2 if findings else 0)

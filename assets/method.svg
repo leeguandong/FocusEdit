@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="268" viewBox="0 0 1120 268" role="img" aria-labelledby="title desc">
+<title id="title">How FocusEdit works</title><desc id="desc">Changed prompt tokens define an attention-derived support, which spatially weights the target/source velocity difference.</desc>
+<style>.bg{fill:#f6f9fa}.ink{fill:#172b35}.muted{fill:#5a6d76}.line{stroke:#d2dce1}.card{fill:#fff;stroke:#dce5e8}.soft{fill:#e5f5f1}.accent{fill:#008c83}.arrow{stroke:#8b9fa8}.formula{fill:#006d65}@media(prefers-color-scheme:dark){.bg{fill:#14222b}.ink{fill:#e8f0f4}.muted{fill:#a5b8c3}.line{stroke:#354850}.card{fill:#1c2e38;stroke:#354850}.soft{fill:#173d3d}.accent{fill:#55d5c6}.arrow{stroke:#78939d}.formula{fill:#75e1d3}}</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10" fill="#8b9fa8"/></marker></defs>
+<rect width="1120" height="268" rx="16" class="bg"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="32" y="36" font-size="11" font-weight="700" letter-spacing="2" class="muted">THE FOCUSEDIT PIPELINE</text>
+<rect x="32" y="57" width="310" height="147" rx="10" class="card"/>
+<rect x="405" y="57" width="310" height="147" rx="10" class="card"/>
+<rect x="778" y="57" width="310" height="147" rx="10" class="soft"/>
+<path d="M358 130h30M731 130h30" stroke-width="2" class="arrow" marker-end="url(#arrow)"/>
+<text x="53" y="87" font-size="11" font-weight="700" letter-spacing="1" class="accent">01 / READ THE EDIT</text>
+<text x="426" y="87" font-size="11" font-weight="700" letter-spacing="1" class="accent">02 / LOCATE THE REGION</text>
+<text x="799" y="87" font-size="11" font-weight="700" letter-spacing="1" class="accent">03 / FOCUS THE GUIDANCE</text>
+<text x="53" y="119" font-size="20" font-weight="700" class="ink">Source + target prompts</text>
+<text x="53" y="150" font-size="15" class="muted">“A red car” → “A blue car”</text>
+<text x="53" y="180" font-size="12" class="muted">Identify changed prompt tokens.</text>
+<text x="426" y="119" font-size="20" font-weight="700" class="ink">Edited-token attention</text>
+<text x="426" y="150" font-size="15" class="muted">SD3 blocks 8–13 → edit support H</text>
+<text x="426" y="180" font-size="12" class="muted">M = α + (1 − α)H, with α = 0.2</text>
+<text x="799" y="119" font-size="20" font-weight="700" class="ink">Spatial velocity modulation</text>
+<text x="799" y="151" font-size="16" font-weight="600" class="formula">v = v_src + w · M · (v_tgt − v_src)</text>
+<text x="799" y="180" font-size="12" class="muted">Apply within the flow editing process.</text>
+<text x="560" y="240" text-anchor="middle" font-size="13" class="muted">Pretrained SD3 attention · No auxiliary localization network · No model training</text>
+</g></svg>
