@@ -1,0 +1,370 @@
+{
+  "rgb": {
+    "baseline": {
+      "struct": {
+        "mean": 41.524387939633534,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 20.67926619721831,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 128.90302340362703,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 82.43320426173348,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 27.017782062802997,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 23.086355328559875,
+        "n_valid": 700
+      }
+    },
+    "attn_binary_a0": {
+      "struct": {
+        "mean": 21.777335089115827,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 25.933121370754655,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 52.746467851248916,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 90.32848261886363,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.605062308992657,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.77296600682395,
+        "n_valid": 700
+      }
+    },
+    "attn_binary_a02": {
+      "struct": {
+        "mean": 23.77738300823174,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 25.135986696901938,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 59.54432483294957,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 89.59613646105896,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.693366312299457,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.822680653163363,
+        "n_valid": 700
+      }
+    },
+    "gt_binary_a0": {
+      "struct": {
+        "mean": 24.497487177639933,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 32.03359564774328,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 16.13390155613134,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 94.01243053537479,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.904060136250088,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 23.326681342806136,
+        "n_valid": 700
+      }
+    },
+    "gt_binary_a02": {
+      "struct": {
+        "mean": 25.72772451518436,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 29.589242595562833,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 25.259482979995582,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 93.05451231465923,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.89748300961086,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 23.26334097181048,
+        "n_valid": 700
+      }
+    },
+    "attn_continuous_a0": {
+      "struct": {
+        "mean": 14.373774698319071,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 28.355574432894482,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 35.62121825399386,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 92.06546405665308,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.26924236842564,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.418446355547225,
+        "n_valid": 700
+      }
+    },
+    "attn_continuous_a02": {
+      "struct": {
+        "mean": 17.932104155354732,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 26.732800334477595,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 46.67579976444195,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 90.89447534341606,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.582549627849033,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.531953433581762,
+        "n_valid": 700
+      }
+    }
+  },
+  "vae": {
+    "baseline": {
+      "struct": {
+        "mean": 40.82625201770237,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 20.93033100546693,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 125.35302823731045,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 84.87339698367839,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 27.017782062802997,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 23.086355328559875,
+        "n_valid": 700
+      }
+    },
+    "attn_binary_a0": {
+      "struct": {
+        "mean": 21.302106313232798,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 27.436519593643627,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 46.07008229587016,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 94.39706643708318,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.605062308992657,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.77296600682395,
+        "n_valid": 700
+      }
+    },
+    "attn_binary_a02": {
+      "struct": {
+        "mean": 23.250945447902527,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 26.123680821425623,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 53.36479508489594,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 93.52244839822646,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.693366312299457,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.822680653163363,
+        "n_valid": 700
+      }
+    },
+    "gt_binary_a0": {
+      "struct": {
+        "mean": 23.95971586941284,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 36.58725656193795,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 7.554950802023741,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 98.93691937486045,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.904060136250088,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 23.326681342806136,
+        "n_valid": 700
+      }
+    },
+    "gt_binary_a02": {
+      "struct": {
+        "mean": 25.17183517004014,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 31.999993578135538,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 17.51924906572555,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 97.74407503201807,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.89748300961086,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 23.26334097181048,
+        "n_valid": 700
+      }
+    },
+    "attn_continuous_a0": {
+      "struct": {
+        "mean": 13.823717054973324,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 30.863488941741505,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 28.141077854228662,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 96.55694755718862,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.26924236842564,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.418446355547225,
+        "n_valid": 700
+      }
+    },
+    "attn_continuous_a02": {
+      "struct": {
+        "mean": 17.32798040524358,
+        "n_valid": 700
+      },
+      "psnr": {
+        "mean": 28.10537930186704,
+        "n_valid": 556
+      },
+      "lpips": {
+        "mean": 39.98830685807223,
+        "n_valid": 556
+      },
+      "ssim": {
+        "mean": 95.0974058011453,
+        "n_valid": 556
+      },
+      "clip_whole": {
+        "mean": 26.582549627849033,
+        "n_valid": 700
+      },
+      "clip_edit": {
+        "mean": 22.531953433581762,
+        "n_valid": 700
+      }
+    }
+  }
+}

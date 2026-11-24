@@ -1,0 +1,76 @@
+{
+  "generation": {
+    "sample_id": "000000000000",
+    "scope": "First sorted sample, chosen independently of output quality",
+    "pipeline": {
+      "baseline": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "attn_binary_a02": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      }
+    },
+    "seven_method_runner": {
+      "source_rgb.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "source_vae.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "mask_predicted.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "mask_gt.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "baseline.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "attn_binary_a0.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "attn_binary_a02.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "gt_binary_a0.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "gt_binary_a02.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "attn_continuous_a0.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      },
+      "attn_continuous_a02.png": {
+        "exact_saved_pixel_parity": true,
+        "max_pixel_error": 0
+      }
+    }
+  },
+  "evaluation": {
+    "sample_id": "000000000000",
+    "per_sample_metric_values_checked": 84,
+    "max_absolute_error": 0,
+    "passed": true
+  },
+  "archived_summary": {
+    "n_edits": 700,
+    "csv_rows": 9800,
+    "means_verified": 84,
+    "paired_bootstrap_summary_exact_match": true
+  },
+  "cpu_behavioral_tests": 3,
+  "wheel_build_passed": true
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "focusedit"
+version = "0.1.0"
+description = "Training-free spatially modulated guidance for background-preserving image editing"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Guandong Li"}, {name = "Mengxia Ye"}]
+dependencies = ["torch>=2.8", "torchvision>=0.23", "numpy>=2", "Pillow>=11", "transformers==5.2.0", "diffusers==0.35.2", "accelerate>=1.11", "sentencepiece", "safetensors"]
+
+[project.optional-dependencies]
+eval = ["torchmetrics==1.8.2", "scikit-image", "opencv-python", "timm", "ftfy", "regex", "PyYAML"]
+
+[project.scripts]
+focusedit = "focusedit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["focusedit*", "reproduce*"]

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use FocusEdit, please cite the manuscript and acknowledge the upstream methods."
+title: "FocusEdit: Training-Free Spatially-Modulated Guidance for Background-Preserving Real Image Editing"
+authors:
+  - family-names: Li
+    given-names: Guandong
+  - family-names: Ye
+    given-names: Mengxia
+version: 0.1.0
+repository-code: "https://github.com/leeguandong/FocusEdit"
+license: MIT
