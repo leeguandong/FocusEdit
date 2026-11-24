@@ -16,28 +16,6 @@
 
 **FocusEdit uses the image model’s own attention to locate an edit and concentrate guidance in that region.** It combines edited-token localization with spatial modulation of the target/source velocity difference, without training an additional model.
 
-<table>
-  <tr>
-    <th align="center" width="33%">Source</th>
-    <th align="center" width="33%">Base editor</th>
-    <th align="center" width="33%">FocusEdit</th>
-  </tr>
-  <tr>
-    <td><img src="assets/replace_source.png" alt="Source illustration of fishes in the ocean" width="280"></td>
-    <td><img src="assets/replace_baseline.png" alt="Unmodulated baseline for fishes to sharks" width="280"></td>
-    <td><img src="assets/replace_focusedit.png" alt="FocusEdit result for fishes to sharks" width="280"></td>
-  </tr>
-  <tr><td colspan="3" align="center"><sub>Replace object: fishes → sharks</sub></td></tr>
-  <tr>
-    <td><img src="assets/add_source.png" alt="Source image of a dog wearing a space suit" width="280"></td>
-    <td><img src="assets/add_baseline.png" alt="Unmodulated baseline adding flowers to the dog" width="280"></td>
-    <td><img src="assets/add_focusedit.png" alt="FocusEdit adding flowers while preserving the space suit" width="280"></td>
-  </tr>
-  <tr><td colspan="3" align="center"><sub>Add object: a dog wearing a space suit → with flowers in its mouth</sub></td></tr>
-</table>
-
-<p align="center"><sub>PIE-Bench examples · matched 512×512 / BF16 settings · default FocusEdit, α = 0.2</sub></p>
-
 ## At a glance
 
 | Spatial focus | Background preservation | Reproducible evaluation |

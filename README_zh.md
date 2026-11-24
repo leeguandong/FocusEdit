@@ -16,28 +16,6 @@
 
 **FocusEdit 利用图像模型自身的注意力定位编辑区域，并将编辑引导集中在该区域。** 方法结合编辑词定位与目标／源条件速度差的空间调制，无需训练额外的定位模型。
 
-<table>
-  <tr>
-    <th align="center" width="33%">源图</th>
-    <th align="center" width="33%">基础编辑器</th>
-    <th align="center" width="33%">FocusEdit</th>
-  </tr>
-  <tr>
-    <td><img src="assets/replace_source.png" alt="Source illustration of fishes in the ocean" width="280"></td>
-    <td><img src="assets/replace_baseline.png" alt="Unmodulated baseline for fishes to sharks" width="280"></td>
-    <td><img src="assets/replace_focusedit.png" alt="FocusEdit result for fishes to sharks" width="280"></td>
-  </tr>
-  <tr><td colspan="3" align="center"><sub>替换物体：鱼 → 鲨鱼</sub></td></tr>
-  <tr>
-    <td><img src="assets/add_source.png" alt="Source image of a dog wearing a space suit" width="280"></td>
-    <td><img src="assets/add_baseline.png" alt="Unmodulated baseline adding flowers to the dog" width="280"></td>
-    <td><img src="assets/add_focusedit.png" alt="FocusEdit adding flowers while preserving the space suit" width="280"></td>
-  </tr>
-  <tr><td colspan="3" align="center"><sub>增加物体：穿宇航服的狗 → 嘴里叼着花</sub></td></tr>
-</table>
-
-<p align="center"><sub>PIE-Bench 示例 · 统一 512×512 / BF16 设置 · 默认 FocusEdit，α = 0.2</sub></p>
-
 ## 方法特点
 
 | 空间定位 | 背景保持 | 可复算实验 |
